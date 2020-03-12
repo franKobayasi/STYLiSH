@@ -1,0 +1,304 @@
+@import "./style.css";
+@import "./reset.css";
+@import "./parts/mainHeader.css";
+@import "./parts/mainFooter.css";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+TC:900|Roboto+Slab|Solway&display=swap');
+:root {
+    --colu1Width:45%;
+    --colu2Width:55%;
+}
+select {
+    outline: medium;
+}
+main {
+    line-height: 19px;
+    font-size: 16px;
+    margin: 50px auto 150px;
+    width: 95vw;
+    max-width: 1160px;
+}
+#webMapInfo {
+    margin-bottom: 50px;
+}
+#tableTitle {
+    width: 100%;
+    margin-bottom: 16px;
+}
+#tableTitle > * {
+    display: inline-block;
+}
+#tableTitle > span:nth-of-type(1) {
+    width: var(--colu1Width);
+}
+#tableTitle > div {
+    width: var(--colu2Width);
+    text-align: left;
+}
+#tableTitle > div > span {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+#cartListTable {
+    border: solid gray .1px;
+    margin-bottom: 26px;
+    padding: 40px 0;
+}
+#cartListTable > div:last-child {
+    margin: 0;
+}
+.cartListItem {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.cartListItem > div:nth-of-type(1) {
+    width: var(--colu1Width);
+}
+.cartListItem > div:nth-of-type(2) {
+    width: 80%;
+    min-width: 375px;
+    text-align: left;
+    margin: 10px auto;
+    display: none;
+}
+.cartListItem > div:nth-of-type(3) {
+    display: inline-block;
+    width: var(--colu2Width);
+    min-width: 375px;
+    text-align: left;
+}
+.cartListItem > div:nth-of-type(2) > span,
+.cartListItem > div:nth-of-type(3) > div {
+    padding-left: 0;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+.imgBox {
+    width: 115px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px 0 30px;
+}
+.imgBox img {
+    width: 100%;
+}
+.productSpec > li:nth-of-type(2) {
+    margin: 15px 0;
+}
+.productSpec > li:nth-of-type(3) {
+    margin-bottom: 10px;
+}
+.itemQty {
+    display: inline-block;
+    width: 80px;
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 30px;
+}
+.removeItem {
+    width: 20px;
+    height: 20px;
+}
+#countryAndPayment {
+    padding: 30px;
+    background-color: #e8e8e8;
+}
+#countryAndPayment > label {
+    margin: 0 20px 0 30px;
+}
+#countryAndPayment > label:nth-of-type(2) {
+    margin: 0 20px 0 80px;
+}
+#countryAndPayment > select {
+    width: 171px;
+    line-height: 30px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+ul.note {
+    margin: 20px 0 50px;
+    list-style: disc inside;
+}
+.note li {
+    line-height: 26px;
+}
+.receiverInfo {
+    border-top: .1px solid gray;
+    border-bottom: .1px solid gray;
+    margin: 16px 0;
+}
+.receiverInfo > li {
+    margin: 30px 0;
+}
+.receiverInfo > li > label {
+    display: inline-block;
+    width: 110px;
+}
+.receiverInfo > li:nth-of-type(1) > input,
+.receiverInfo > li:nth-of-type(2) > input,
+.receiverInfo > li:nth-of-type(3) > input,
+.receiverInfo > li:nth-of-type(4) > input {
+    max-width: 575px;
+    width: 95%;
+    line-height: 25px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.receiverInfo > li:nth-of-type(4) {
+    line-height: 30px;
+}
+.receiverInfo > li:nth-of-type(4) > span {
+    margin: 0 15px 0 10px;
+}
+#cardviewContainer {
+    margin: 16px 0 40px;
+    padding-bottom: 16px;
+    border-bottom:.1px solid gray;
+}
+#cardviewContainer > div {
+    max-width: 400px;
+    height: 50px;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+    margin: 25px 0;
+    padding: 0 15px;
+}
+#Message {
+    display: block;
+    width: 400px;
+    height: 150px;
+    margin: 25px 0;
+    border: none;
+    background-color: transparent;
+}
+#billInfo ul {
+    width: 240px;
+    float: right;
+}
+#billInfo > ul > li {
+    margin-bottom: 20px;
+}
+#billInfo > ul > li:nth-of-type(2) {
+    padding-bottom: 20px;
+    border-bottom: .1px solid gray;
+}
+#billInfo > ul > li:last-of-type {
+    margin-top: 40px;
+}
+#billInfo > ul > li > span,
+#billInfo > ul > li > div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+#billInfo > ul > li > div {
+    text-align: right;
+}
+.payTheBill {
+    width: 240px;
+    float: right;
+    line-height: 60px;
+    margin-top: 40px;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Msg_noItem {
+    text-align: center;
+}
+/****************
+    Media Query 
+ ****************/
+@media screen and (max-width:1250px) {
+    #billInfo {
+        padding:0 20px;
+    }
+}
+@media screen and (max-width:750px) {
+    /** delivery part : country and payment*/
+    #countryAndPayment label {
+        display: block;
+        margin: 0 0 15px !important;
+    }
+    #countryAndPayment > select {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    /** shopping list item display*/
+    .cartListItem {
+        position: relative;
+        text-align: center;
+    }
+    .productDetail {
+        width: 80% !important;
+        text-align: left;
+        margin: 15px auto;
+        display: block;
+    }
+    .productDetail .imgBox{
+        margin-left: 0px;
+    }
+    .cartListItem > .infoPart {
+        width: 80% !important;
+    }
+    .cartListItem > .infoPart >*{
+        width: 30% !important;
+        text-align: center;
+    }
+    .removeItem {
+        position: absolute;
+        top: 150px;
+        right: 0px;
+    }
+    .cartListItem > .infoPartTitle {
+        display: block !important;
+    }
+    #tableTitle > div {
+        display: none;
+    }
+    .receiverInfo > li {
+        margin: 20px 0;
+    }
+    .receiverInfo > li > label {
+        width: 100%;
+        display: block;
+        margin: 10px 0;
+    }
+    .receiverInfo > li:nth-of-type(1) > input,
+    .receiverInfo > li:nth-of-type(2) > input,
+    .receiverInfo > li:nth-of-type(3) > input,
+    .receiverInfo > li:nth-of-type(4) > input {
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+    }
+    .receiverInfo > li:nth-of-type(5) > input {
+        width: 10%;
+        display: inline-block;
+        margin: 0;
+    }
+    .receiverInfo > li:nth-of-type(5) > span {
+        width: 90%;
+        display: inline-block;
+        margin: 0;
+    }
+}
+@media screen and (max-width:550px) {
+    .payTheBill {
+        width: 100%;
+    }
+    main {
+        margin-bottom: 50px;
+    }
+    #webMapInfo {
+        display: none;
+    }
+    .productSpec {
+        max-width: 45%;
+    }
+}

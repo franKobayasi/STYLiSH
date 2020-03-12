@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="uft-8">
+        <title>STYLISH｜Cart</title>
+        <link rel="stylesheet" type="text/css" href="./css/cart.css"/>
+        <script src="https://js.tappaysdk.com/tpdirect/v5.1.0"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="mainNav">
+                <img class="btn_logo01" src="./img/webLogo.svg" />
+                <div class="inlineBlock mainNavTitles catagoBtn">
+                    <span>女裝</span><!--
+                 --><span>男裝</span><!--
+                 --><span>配件</span>
+                </div>
+                <img class="inlineBlock profile_btn profileBtn" src="img/btn-member-01-normal.svg"/>
+                <div class="inlineBlock mainNav_cart cartBtn"><div class="num"></div></div>
+                <form class="inlineBlock queryBox" action="./index.html">
+                    <input type="search" name="keyword" /><!--
+                 --><img src="./img/search.png" />
+                </form> 
+            </nav>
+            <nav class="secondNav">
+                <div class="secondNavTitles catagoBtn">
+                    <span class="inlineBlock">女裝</span><!--
+                 --><span class="inlineBlock">男裝</span><!--
+                 --><span class="inlineBlock">配件</span>
+                </div>
+            </nav>
+            <nav class="fixedNav"><!--
+            --><a class="inlineBlock cartBtn"><div class="inlineBlock fixedNav_cart"><div class="num"></div></div>購物車</a><!--
+            --><a class="inlineBlock profileBtn"><img src="img/btn-member-02-normal.svg"/>會員</a>
+            </nav>
+        </header>
+        <main>
+            <div id="webMapInfo">HOME > BEG</div>
+            <div id="tableTitle">
+                <span>購物車（3）</span><!--
+             --><div>
+                   <span>數量</span><!--
+                --><span>單價</span><!--
+                --><span>小計</span>
+                </div>
+            </div>
+            <div id="cartListTable">
+                
+            </div> <!--- end #cartListTable -->
+            <div id="deliverInfo">
+                <div id="countryAndPayment">
+                    <label for="country">配送國家</label>
+                    <select name="country">
+                        <option selected>台灣及離島</option>
+                    </select>
+                    <label for="payment">付款方式</label>
+                    <select name="payment">
+                        <option selected>信用卡</option>
+                    </select>
+                </div>
+                <ul class="note">
+                    ※ 提醒您：
+                    <li>選擇宅配-請填寫正確收件人資訊，避免包裹配送不達</li>
+                    <li>選擇超商-請填寫正確的收件人姓名（與證件相符），避免無法領取</li>
+                </ul>
+                <div>訂購資料</div>
+                <ul class="receiverInfo">
+                    <li><label for="deliverInfoName">收件人姓名</label><input id="deliverInfoName" name="deliverInfoName" type="text" placeholder="務必填寫完整收件人姓名，避免包裹無法順利簽收"/></li>
+                    <li><label for="deliverInfoTel">手機</label><input id="deliverInfoTel" name="deliverInfoTel" type="tel"/></li>
+                    <li><label for="deliverInfoEmail">Email</label><input id="deliverInfoEmail" name="deliverInfoEmail" type="Email"/></li>
+                    <li><label for="deliverInfoAddress">地址</label><input id="deliverInfoAddress" name="deliverInfoAddress" type="address"/></li>
+                    <li id="deliverTimePrefer"><label for="deliverTimePrefer">配送時間</label>
+                        <input name="deliverTimePrefer" type="radio" value="morning"/><span>08:00-12:00</span>
+                        <input name="deliverTimePrefer" type="radio" value="afternoon"/><span>14:00-18:00</span>
+                        <input name="deliverTimePrefer" type="radio" value="anytime" checked/><span>不指定</span>
+                    </li>
+                </ul>
+                <div id="cardviewContainer">
+                    <label>信用卡</label>
+                    <div class="tpfield" id="card-number"></div>
+                    <div class="tpfield" id="card-expiration-date"></div>
+                    <div class="tpfield" id="card-ccv"></div>
+                    <textarea type="text" id="Message" placeholder="提示訊息" disabled ></textarea>
+                </div>
+                <div id="billInfo">
+                    <ul>
+                        <li>
+                            <span>總金額</span><div id="totalMoney"></div>
+                        </li>
+                        <li>
+                            <span>運費</span><div id="shippingCost"></div>
+                        </li>
+                        <li>
+                            <span>應付金額</span><div id="sumNeedToPay"></div>
+                        </li>
+                    </ul>
+                    <div class="clearBoth"><div class="payTheBill">確認付款</div></div>
+                    
+                </div>
+        </main>
+        <div id="loginBox">
+            <img src="./img/webLogo.svg" />
+            <div><label>帳號 </label><input name="account" /></div>
+            <div><label>密碼 </label><input type="password" name="password" /></div>
+            <div><button class="signUp_btn">註冊</button><button class="signIn_btn">登入</button></div>
+            <div class="loginAsStranger">訪客登入</div>
+            <div 
+                class="fb-login-button" 
+                data-width="100%" 
+                data-size="large"        
+                data-button-type="login_with" 
+                data-auto-logout-link="true" 
+                data-use-continue-as="true"
+                data-scope="public_profile, email"
+                data-onlogin='checkFBLoginState'>
+            </div>
+        </div>
+        <footer>
+            <div class="footerContainer">
+                <ul class="footerItemContainer inlineBlock">
+                    <li><a href="#">關於 Stylish</a></li><!--
+                 --><li><a href="#">服務條款</a></li><!--
+                 --><li href="#"><a href="#">隱私政策</a></li>
+                </ul><!--
+             --><ul class="footerItemContainer inlineBlock">
+                    <li><a href="#">連絡我們</a></li><!--
+                 --><li><a href="#">FAQ</a></li>
+                </ul><!--
+            --><div class="footerItemContainer2 inlineBlock">
+                    <a><img src="./img/line.png"/></a><!--
+                 --><a><img src="./img/twitter.png"/></a><!--
+                 --><a><img src="./img/facebook.png"/></a>
+                </div><!--
+            --><span class="copyRight inlineBlock">&copy;2018 All rights reversed.</span>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/cart.js"></script>
+        
+    </body>
+</html>

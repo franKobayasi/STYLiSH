@@ -1,0 +1,15 @@
+div,p,section,form,header,nav,main,footer,h1,h2,h3,h4,h5,h6,ul,ol,dl,li
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /*改變默認值的 visible */
+    box-sizing: border-box; /*改變默認值的 content-box*/
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    position: relative; /*改變默認值的 static */
+}
+a {
+    text-decoration: none;
+}

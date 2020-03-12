@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="uft-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- 
+        X-UA-Compatible是IE8的專有的屬性，它告訴IE8採用何種IE版本去渲染網頁。
+        content的值選擇了以 edge去渲染或以chrome v8引擎 
+        -->
+        <title>STYLISH｜Main Page</title>
+        <link rel="stylesheet" type="text/css" href="./css/profile.css"/>
+        <!-- Facebook SDK set up -->
+        
+    </head>
+    <body>
+        <header>
+            <nav class="mainNav">
+                <img class="btn_logo01" src="./img/webLogo.svg" />
+                <div class="inlineBlock mainNavTitles catagoBtn">
+                    <span>女裝</span><!--
+                 --><span>男裝</span><!--
+                 --><span>配件</span>
+                </div>
+                <img class="inlineBlock profile_btn profileBtn" src="img/btn-member-01-normal.svg"/>
+                <div class="inlineBlock mainNav_cart cartBtn"><div class="num"></div></div>
+                <form class="inlineBlock queryBox" action="./index.html" >
+                    <input type="search" name="keyword" /><!--
+                 --><img src="./img/search.png" />
+                </form> 
+            </nav>
+            <nav class="secondNav">
+                <div class="secondNavTitles catagoBtn">
+                    <span class="inlineBlock">女裝</span><!--
+                 --><span class="inlineBlock">男裝</span><!--
+                 --><span class="inlineBlock">配件</span>
+                </div>
+            </nav>
+            <nav class="fixedNav"><!--
+            --><a class="inlineBlock cartBtn"><div class="inlineBlock fixedNav_cart"><div class="num"></div></div>購物車</a><!--
+            --><a class="inlineBlock profileBtn"><img src="img/btn-member-02-normal.svg"/>會員</a>
+            </nav>
+        </header>
+        <main></main>
+        <div id="loginBox">
+            <img src="./img/webLogo.svg" />
+            <div><label>帳號 </label><input name="account" /></div>
+            <div><label>密碼 </label><input type="password" name="password" /></div>
+            <div><button class="signUp_btn">註冊</button><button class="signIn_btn">登入</button></div>
+            <div class="loginAsStranger">訪客登入</div>
+            <div 
+                class="fb-login-button" 
+                data-width="100%" 
+                data-size="large"        
+                data-button-type="login_with" 
+                data-auto-logout-link="true" 
+                data-use-continue-as="true"
+                data-scope="public_profile, email"
+                data-onlogin='checkFBLoginState'>
+            </div>
+        </div> 
+        <footer>
+            <div class="footerContainer">
+                <ul class="footerItemContainer inlineBlock">
+                    <li><a href="#">關於 Stylish</a></li><!--
+                 --><li><a href="#">服務條款</a></li><!--
+                 --><li href="#"><a href="#">隱私政策</a></li>
+                </ul><!--
+             --><ul class="footerItemContainer inlineBlock">
+                    <li><a href="#">連絡我們</a></li><!--
+                 --><li><a href="#">FAQ</a></li>
+                </ul><!--
+            --><div class="footerItemContainer2 inlineBlock">
+                    <a><img src="./img/line.png"/></a><!--
+                 --><a><img src="./img/twitter.png"/></a><!--
+                 --><a><img src="./img/facebook.png"/></a>
+                </div><!--
+            --><span class="copyRight inlineBlock">&copy;2018 All rights reversed.</span>
+            </div>
+        </footer>
+        
+        <script type="text/javascript" src="./js/main.js"></script>
+        <script type="text/javascript" src="./js/profile.js"></script>
+    </body>
+</html>

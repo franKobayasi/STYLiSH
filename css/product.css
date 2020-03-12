@@ -1,0 +1,251 @@
+@import "./reset.css";
+@import "./style.css";
+@import "./parts/mainFooter.css";
+@import "./parts/mainHeader.css";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+TC:900|Roboto+Slab|Solway&display=swap');
+
+:root {
+    /*********body width 約97vw*/
+    --imgBoxWidth: 47.5vw;
+}
+
+/***************
+       Main 
+ ***************/
+ .product-mainDiv {
+    max-width: 1000px;
+    width: 100%;
+    margin: 65px auto 49px;
+}
+/******** Product Detail*/
+.productDetail {
+    width: 100%;
+    padding: 0 20px;
+    height: fit-content;
+}
+.imgBox {
+    width: 560px;
+    /* min-width: 360px; */
+    max-height: 750px;
+    height: calc(var(--imgBoxWidth)*1.33);
+    min-height: 480px;
+    margin: 0;
+}
+
+.imgBox img {
+    width: 100%;
+}
+.contentBox {
+    width: 400px;
+    /* min-width: 360px; */
+    height: fit-content;
+    padding: 0 0 0 40px;
+}
+/* In .contentBox */
+.contentBox h3 {
+    font-size: 32px;
+    line-height: 38px;
+}
+#productID {
+    color: #bababa;
+    letter-spacing: 4px;
+    margin-top: 16px;
+}
+#productPrice {
+    font-size: 30px;
+    color: #3a3a3a;
+    margin-top: 40px;
+    height: 56px;
+    border-bottom: black 1px solid;
+}
+.productSpec {
+    margin: 30px 0 30px;
+}
+.productSpec .title {
+    vertical-align: middle;
+    margin-right: 20px; 
+    line-height: 100%;
+}
+.productColor {
+    line-height: 36px;
+}
+#productColor > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 21px;
+    width: fit-content;
+    height: fit-content;
+}
+.colorChoosed {
+    border: #3a3a3a .1px solid !important;
+}
+#productColor .colorValue {
+    border: .1px solid lightslategray;
+    width: 24px;
+    height: 24px;
+    margin: 6px;
+    padding: 6px;
+}
+#productColor > div:nth-of-type(1) div {
+    background-color: seagreen;
+}
+#productColor > div:nth-of-type(2) div {
+    background-color: saddlebrown;
+}
+#productSize div {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 34px;
+    padding-bottom: 10px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #cecece;
+    color:#979797;
+    margin-right: 20px;
+    cursor: default;
+}
+.sizeChoosed {
+    background-color: black !important;
+}
+.numberOfProduct {
+    width: 160px;
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px #979797;
+}
+.numberOfProduct > * {
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
+}
+.numberOfProduct > button {
+    width: 10%;
+    height: 20px;
+    background: none;
+    outline: medium;
+}
+#productNumValue {
+    font-size: 20px;
+    width:70%;
+}
+#addToCart_Btn {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    line-height: 60px;
+    text-align: center;
+}
+.noteOfProduct, .textureOfProduct, .placeOfProduct {
+    margin: 30px 0;
+    line-height: 30px;
+}
+.theHrLine {
+    margin: 28px 0;
+}
+.theHrLine > span {
+    display: inline-block;
+}
+.theHrLine > span:nth-of-type(1) {
+    width: 30%;
+    color: var(--sepia);
+}
+.theHrLine > span:nth-of-type(2) {
+    width: 70%;
+    vertical-align: 5.5px;
+    border-bottom: 1px solid black;
+}
+.storyOfProduct {
+    line-height: 30px;
+    margin: 15px 0;
+}
+.storyImgOfProduct {
+    width: 100%;
+    margin: 15px 0;
+}
+.productMore {
+    width: 100%;
+    padding: 0px 20px;
+}
+
+/****************
+    Media Query 
+ ****************/
+@media screen and (max-width: 1177px) {
+    .productDetail .imgBox {
+        width: 51%;
+    }
+    .productDetail .contentBox {
+        width: 49%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .product-mainDiv {
+        margin-top: 35px;
+    }
+    .productDetail .contentBox {
+        padding: 0 0 0 20px;
+    }
+    .productSpec .title {
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .product-mainDiv {
+        margin-top: 0;
+    }
+    .productDetail {
+        padding: 0;
+    }
+    .productDetail .imgBox, .productDetail .contentBox {
+        float: none;
+    }
+    .productDetail .imgBox {
+        width: 100%;
+    }
+    .productDetail .contentBox {
+        padding: 20px;
+        width: 100%;
+    }
+    #productNumber .title {
+        display: none;
+    }
+    .numberOfProduct {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .contentBox h3 {
+        font-size: 20px;
+        line-height: normal;
+    }
+    #productID {
+        font-size: 16px;
+        letter-spacing: 3.2px;
+    }
+    #productPrice {
+        font-size: 20px;
+        color: #3a3a3a;
+        margin-top: 20px;
+        height: 34px;
+        border-bottom: black 1px solid;
+    }
+    .productSpec {
+        font-size: 14px;
+    }
+    #productSize > div {
+        font-size: 16px;
+    }
+    #addToCart_Btn {
+        font-size: 16px;
+    }
+    .noteOfProduct, .textureOfProduct, .placeOfProduct, .storyOfProduct {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 10px 0;
+    }
+    .storyImgOfProduct {
+        margin: 10px 0;
+    }
+}

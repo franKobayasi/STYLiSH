@@ -1,0 +1,217 @@
+/****************
+    Main Header 
+ ****************/
+.sepiaFontColor {
+    color: var(--sepia)!important;
+}
+ 
+ /********************* mainNav */
+ .mainNav {
+    height: 100px;
+    background-color: #ffffff;
+}
+.btn_logo01 {  /* 網站LOGO */
+    float: left;
+    margin: 26px 60px;
+    width: 258px;
+    height: 48px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+.mainNavTitles {
+    margin-left: 46px;
+    line-height: 100px;
+}
+.mainNavTitles > span {
+    width: 150px;
+    display: inline-block;
+    line-height: 28px; /* 控制分隔線的長度 */
+    text-align: center ; 
+    color: #3f3a3a;
+    border-left: .1px solid #3f3a3a ;
+    cursor: default;
+}
+.mainNavTitles > span:first-child {
+    border-left: none;
+}
+.mainNavTitles > span:hover {
+    color: var(--toupe);
+}
+.queryBox {
+    width: fit-content;
+    height: 40px;
+    margin-top: 30px;
+    border: 1px solid #979797 ;
+    border-radius: 20px;
+    text-align: left;
+    overflow: hidden;
+}
+.queryBox > input {
+    vertical-align: middle;
+    margin-left: 14px;
+    width: 150px;
+    line-height: 20px;
+    font-size: 20px;
+    border: none; 
+    outline: medium;
+     /* focus的狀態下不會顯示文字框 */ 
+}
+.queryBox > img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.mainNav_cart{
+    background-image: url("../../img/cart.svg"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    overflow: visible;
+    cursor: pointer;
+}
+.mainNav_cart > .num {
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    background-color:var(--sepia);
+    color: antiquewhite;
+    position: relative;
+    top: -5px;
+    right: -15px;
+}
+.profile_btn, .mainNav_cart{
+    width: 44px;
+    height: 44px;
+    margin-top: 28px;
+    margin-left: 42px;
+}
+.profile_btn {
+    margin-right: 54px;
+}
+.profile_btn, .mainNav_cart, .queryBox {
+    float: right;
+}
+
+/********************* secondNav */
+.secondNav {
+    height: 40px;
+    background-color: var(--charcoal-grey);
+}
+.secondNavTitles {
+    display: none;
+}
+.secondNavTitles > span {
+    color: #828282;
+    cursor: default;
+    font-size: 16px;
+    text-align: center;
+    width: 32%;
+    border-left: .1px solid #828282;
+}
+.secondNavTitles > span:first-child {
+    /* color: #fff; */
+    border: none;
+}
+
+/********************* fixedNav */
+.fixedNav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--charcoal-grey);
+    text-align: center;
+    z-index: 10;
+}
+.fixedNav a {
+    margin-top: 15px;
+    width: 40%;
+    text-align: left;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 0 0 5%;
+}
+.fixedNav a:first-child {
+    border-right: .1px solid #fff ;
+    text-align: right;
+    padding: 0 5% 0 0;
+}
+.fixedNav_cart {
+    background-image: url("../../img/cart.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    overflow: visible;
+    cursor: pointer;
+}
+.fixedNav_cart > .num {
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color:var(--sepia);
+    color: antiquewhite;
+    position: relative;
+    top: -5px;
+    right: -25px;
+}
+.fixedNav img, .fixedNav .fixedNav_cart {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.categoBtn > span, .cartBtn {
+    cursor: default;
+}
+/****************
+    Media Query 
+ ****************/
+@media screen and (max-width:1350px) {
+    .queryBox {
+        margin-top: 32px;
+        /* width: 50px; */
+        border: none;
+    }
+    .queryBox > input {
+        display: none;
+    }
+} 
+@media screen and (max-width:1200px) {
+    .mainNavTitles {    
+        display: none !important;
+    }
+    .secondNavTitles {
+        margin-top: 8px;
+        display: block;
+    }
+    .secondNav {
+        height: 50px;
+    }
+} 
+@media screen and (max-width:700px) {
+    .fixedNav {
+        display: block;
+    }
+    .profile_btn, .mainNav_cart {
+        display: none !important;
+    }
+    .mainNav {
+        text-align: center;
+    }
+    /*  Black Man Q
+    .btn_logo01 {
+        float: none;
+        margin: 0;
+        width: 100%;
+    } */
+    .btn_logo01 {
+        position: absolute;
+        margin-left: -129px;
+        left: 50%;
+    }
+} 

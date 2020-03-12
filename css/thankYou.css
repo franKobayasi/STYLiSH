@@ -1,0 +1,52 @@
+@import './parts/mainHeader.css';
+@import './parts/mainFooter.css';
+@import './reset.css';
+@import './style.css';
+
+body {
+    min-height: 100vh;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+main {
+    width: 100%;
+}
+#mainDiv {
+    margin: 150px auto 265px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+#mainDiv div {
+    color: var(--sepia);
+}
+#mainDiv > img {
+    width: 100%;
+    /* animation: Scale 2s ease 0 linear normal none; */
+    animation-name:Scale;
+    animation-duration: .75s;
+    animation-iteration-count:1;
+    animation-timing-function: ease-in;
+    animation-direction:normal;
+}
+@media screen and (max-width:1200px) {
+    #mainDiv {
+        margin: 100px auto 265px;
+    }
+}
+@media screen and (max-width:700px) {
+    #mainDiv {
+        margin: 100px auto 365px;
+    }
+}
+@keyframes Scale {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1.0);
+    }
+}

@@ -1,0 +1,76 @@
+/*********************
+  Style of Stylish Web  
+ *********************/
+
+:root {
+    --sepia:#8b572a;
+    --charcoal-grey:#313538;
+    --toupe:#c49871;
+}
+body {
+    font-size: 20px; /* 默認字型與大小設定 */
+    font-family: 'Noto Serif TC','Noto Serif','Solway','Roboto Slab', serif;
+}
+
+/* Display Tag */
+.inlineBlock { display: inline-block; vertical-align: middle;}
+.floatLeft { float: left; }
+.floatRight { float: right; }
+.clearBoth { clear: both; }
+
+p, a, span, div, input, select, button {
+    user-select: none;
+}
+
+#loginBox {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px double black;
+    width: 400px;
+    text-align: center;
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+#loginBox img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+#loginBox div {
+    margin-bottom: 10px;
+    width: 100%;
+}
+#loginBox label {
+    display: inline-block;
+    width: 15%;
+    vertical-align: middle;
+    text-align: left;
+}
+#loginBox input {
+    width: 75%;
+    height: 25px !important;
+    border-radius: 5px;
+    height: 20px;
+    border: .5px solid lightgray;
+    padding-left: 10px;
+}
+#loginBox button {
+    margin: 15px 10%;
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    border: .5px solid gray;
+    outline: none;
+    cursor: pointer;
+}
+.loginAsStranger {
+    color: white;
+    font-size: 18px;
+    background-color: slategrey;
+    border-radius: 5px;
+    line-height: 40px;
+}

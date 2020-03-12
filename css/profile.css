@@ -1,0 +1,17 @@
+@import "./reset.css";
+@import "./style.css";
+@import "./parts/mainFooter.css";
+@import "./parts/mainHeader.css";
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+TC:900|Roboto+Slab|Solway&display=swap');
+
+main {
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+}
+main > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 30px;
+    
+}
