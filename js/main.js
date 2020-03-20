@@ -227,7 +227,7 @@ window.fbAsyncInit = function() {
             status           : true,
         });
     console.log('Facebook initialized')
-    checkFBLoginState();
+    // checkFBLoginState();
 };
 (function(d, s, id) {                      // Load the SDK asynchronously
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -237,4 +237,4 @@ window.fbAsyncInit = function() {
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-checkLoginState();
+// checkLoginState();
